@@ -15,13 +15,15 @@ To install the program, simply clone the repository and navigate to the installa
 
 ### [Usage](#Usage)
 
-To run the program you can call `python main.py`, the software runs in the terminal and makes use of the size of the terminal to determine how big of a plain to create. To adjust the size of the font in your terminal, use `Ctrl+'+'` and `Ctrl+'-'`.
+To run the program you can call `python main.py [filename]`, the software runs in the terminal and makes use of the size of the terminal to determine how big of a plain to create. To adjust the size of the font in your terminal, use `Ctrl+'+'` and `Ctrl+'-'`.
 
 You can change the size of the terminal at run time, but the changes won't take affect until the next time the software is started.
 
 ### [API](#API)
 
 You can create your own patterns to construct as blueprints, they're passed into the `Plain.construct()` method [[source]](./plain.py)
+
+Or you can save them as a `.rle` format file and load them in using the main usage. Or by manually calling `read_rle()` [[source]](./file.py) to create a blueprint and then load it by calling the `Plain.construct()` method.
 
 You calling `tick()` moves the plain through one iteration
 
