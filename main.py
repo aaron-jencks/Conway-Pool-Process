@@ -1,6 +1,8 @@
 from plain import LifePlain
+from file import read_rle
 
 import os
+import sys
 
 
 def create_glider(r: int, c: int, plain: LifePlain) -> LifePlain:
@@ -90,11 +92,21 @@ if __name__ == '__main__':
         p = LifePlain(termsize.lines, termsize.columns)
         # create_generator(termsize.line // 2, termsize.cloumns // 2, p)
     except Exception:
-        p = LifePlain(10, 10)
+        p = LifePlain(20, 20)
 
-    # create_glider(1, 1, p)
+    try:
+        blueprint = read_rle(sys.argv[1])
+        r = int(input('Row: '))
+        c = int(input('Column: '))
+        p.construct(r, c, blueprint)
+    except Exception:
+        # create_gun(10, 20, p)
+        # create_glider(1, 1, p)
 
-    create_gun(10, 20, p)
+        blueprint = read_rle('test.rle')
+        p.construct(6, 4, blueprint)
+
+    # create_gun(10, 20, p)
 
     while True:
         print('\033[2J\033[H' + str(p), end='')

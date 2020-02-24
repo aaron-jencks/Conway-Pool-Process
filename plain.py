@@ -1,5 +1,3 @@
-from populant import LifePopulant
-
 import numpy as np
 
 from multiprocessing import Process, Queue, Pool
