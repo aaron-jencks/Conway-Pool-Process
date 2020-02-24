@@ -9,6 +9,8 @@ A multicore processing example of Conway's Game of Life
 
 ### [Installation](#Installation)
 
+You need `numpy` to run this, so go ahead and install it `pip/pip3 install numpy` simple as that. Or whatever your current environment setup is, do the correct installation procedure.
+
 To install the program, simply clone the repository and navigate to the installation location with a terminal. Then call `python main.py`.
 
 ### [Usage](#Usage)
