@@ -100,11 +100,11 @@ if __name__ == '__main__':
         c = int(input('Column: '))
         p.construct(r, c, blueprint)
     except Exception:
-        # create_gun(10, 20, p)
+        create_gun(10, 20, p)
         # create_glider(1, 1, p)
 
-        blueprint = read_rle('test.rle')
-        p.construct(6, 4, blueprint)
+        # blueprint = read_rle('test.rle')
+        # p.construct(6, 4, blueprint)
 
     # create_gun(10, 20, p)
 
